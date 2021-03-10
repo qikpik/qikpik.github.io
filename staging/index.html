@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    Fore more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  -->
+  <base href="/staging">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Shop Fast with QikPik.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Order your prints at home and pickup when ready. No waiting in the queue!s">
+  <link rel="apple-touch-icon" href="icons/meta_img.png">
+
+
+  <title>QikPik | Order ahead now.</title>
+  <meta name="title" content="QikPik | Order ahead now.">
+  <meta name="description" content="Order your prints at home and pickup when ready. No waiting in the queue!">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QikPik | Order ahead now.">
+  <meta property="og:url" content="https://go.qikpik.store/">
+  <meta property="og:title" content="QikPik | Order ahead now.">
+  <meta property="og:description" content="Order your prints at home and pickup when ready.">
+  <meta property="og:image" itemprop="image" content="icons/meta-image-whatsapp.jpg">
+  
+
+  <!-- Twitter -->
+  <!-- <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://go.qikpik.store/">
+  <meta property="twitter:title" content="QikPik | Order ahead now.">
+  <meta property="twitter:description" content="Order your prints at home and pickup when ready. No waiting in the queue!">
+  <meta property="twitter:image" content="icons/meta-image-twitter.jpg"> -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="shortcut icon" href="icons/logo.ico" type="image/x-icon" />
+
+  <title>QikPik India</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-first-frame', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js?v=2595208505');
+      });
+    }
+  </script>
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script src="../lib/notifications.js"></script>
+  <script src="../lib/shareLink.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+  <script>
+    var firebaseConfig = {
+    apiKey: "AIzaSyB_ZMISXNRTT7TYCIdHS20i7R_pk2R7dO0",
+    authDomain: "qikpiksmsauth-995f7.firebaseapp.com",
+    databaseURL: "https://qikpiksmsauth-995f7.firebaseio.com",
+    projectId: "qikpiksmsauth-995f7",
+    storageBucket: "qikpiksmsauth-995f7.appspot.com",
+    messagingSenderId: "906767261039",
+    appId: "1:906767261039:web:fa4176be242d69ed929c9a"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
