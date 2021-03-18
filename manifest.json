@@ -1,11 +1,11 @@
 {
-    "name": "qikpik_flutter_frontend",
-    "short_name": "qikpik_flutter_frontend",
+    "name": "QikPik | Shop Fast",
+    "short_name": "QikPik",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Order your prints at home and pickup when ready.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

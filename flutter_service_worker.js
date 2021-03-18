@@ -3,18 +3,36 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "3d582fc5e759d63cdf1c7c01e580cfa5",
-"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/NOTICES": "6bbc03cbaad053ff70b59e60003c0dec",
+  "assets/AssetManifest.json": "415b04417a25cea4a7f53d14bdab4975",
+"assets/assets/Logo.png": "ed6a24be5bfd62823363015bc4b57800",
+"assets/FontManifest.json": "d753ee3c4f88ff0449db9f8af5ebff24",
+"assets/fonts/MaterialIcons-Regular.otf": "27206588da6d3d24f71ec64067b75eb0",
+"assets/fonts/Montserrat-Black.ttf": "27e3649bab7c62fa21b8837c4842e40e",
+"assets/fonts/Montserrat-BlackItalic.ttf": "d9b6ba595b059fc5d48e8f52c30f73b3",
+"assets/fonts/Montserrat-Bold.ttf": "ade91f473255991f410f61857696434b",
+"assets/fonts/Montserrat-BoldItalic.ttf": "1b38414956c666bd1df78fe5b9c84756",
+"assets/fonts/Montserrat-ExtraBold.ttf": "19ba7aa52a78c3896558ac1c0a5fb4c7",
+"assets/fonts/Montserrat-ExtraBoldItalic.ttf": "52a50ca037f2f96fa567404dc3c5bdfb",
+"assets/fonts/Montserrat-ExtraLight.ttf": "570a244cacd3d78b8c75ac5dd622f537",
+"assets/fonts/Montserrat-ExtraLightItalic.ttf": "1170df5548b7e238df5fa14b6f1a753e",
+"assets/fonts/Montserrat-Italic.ttf": "a7063e0c0f0cb546ad45e9e24b27bd3b",
+"assets/fonts/Montserrat-Light.ttf": "409c7f79a42e56c785f50ed37535f0be",
+"assets/fonts/Montserrat-LightItalic.ttf": "01c4560c9c15069b6700ce7ad2e49a9c",
+"assets/fonts/Montserrat-Medium.ttf": "c8b6e083af3f94009801989c3739425e",
+"assets/fonts/Montserrat-MediumItalic.ttf": "40a74702035bf9ef19053c84ce9a58b9",
+"assets/fonts/Montserrat-Regular.ttf": "ee6539921d713482b8ccd4d0d23961bb",
+"assets/fonts/Montserrat-SemiBold.ttf": "c641dbee1d75892e4d88bdc31560c91b",
+"assets/fonts/Montserrat-SemiBoldItalic.ttf": "83c1ec1f1db9a6416791f7d9d29536f2",
+"assets/fonts/Montserrat-Thin.ttf": "43dd5b7a3d277362d5e801e5353e3a01",
+"assets/fonts/Montserrat-ThinItalic.ttf": "3c2b290f95cd5b33c3ead2911064a2ab",
+"assets/NOTICES": "c487d07c10b8cc829e02774f1a71be17",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
-"assets/web/icons/Logo.png": "ed6a24be5bfd62823363015bc4b57800",
 "favicon.png": "08db2449be297eeb6344e770af74e95b",
 "icons/Logo.png": "ed6a24be5bfd62823363015bc4b57800",
-"index.html": "5a5bed04e502f7bb810107c6634bc7ef",
-"/": "5a5bed04e502f7bb810107c6634bc7ef",
-"main.dart.js": "286932c4b5547ef6c161e2f4113d3338",
+"index.html": "7a7065480243ffd9eed6b929abfa4972",
+"/": "7a7065480243ffd9eed6b929abfa4972",
+"main.dart.js": "e211e9c2cbff92cd2507adcc09a74908",
 "manifest.json": "273c0878f4ba3995ad3813dd7aebc937",
 "version.json": "a3e14a464c3e94d94f5af36b2bfb2ad5"
 };
@@ -34,7 +52,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
