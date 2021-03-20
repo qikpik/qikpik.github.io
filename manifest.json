@@ -1,11 +1,11 @@
 {
-    "name": "QikPik | Shop Fast",
+    "name": "QikPik | Shop Fast!",
     "short_name": "QikPik",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Order your prints at home and pickup when ready.",
+    "description": "Order your prints at home and pickup when ready. No waiting in the queue!",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
