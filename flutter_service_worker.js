@@ -25,14 +25,14 @@ const RESOURCES = {
 "assets/fonts/Montserrat-SemiBoldItalic.ttf": "83c1ec1f1db9a6416791f7d9d29536f2",
 "assets/fonts/Montserrat-Thin.ttf": "43dd5b7a3d277362d5e801e5353e3a01",
 "assets/fonts/Montserrat-ThinItalic.ttf": "3c2b290f95cd5b33c3ead2911064a2ab",
-"assets/NOTICES": "c487d07c10b8cc829e02774f1a71be17",
+"assets/NOTICES": "cad9ce1bc5f2f4538bb02db23c24bc41",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
 "favicon.png": "08db2449be297eeb6344e770af74e95b",
 "icons/Logo.png": "ed6a24be5bfd62823363015bc4b57800",
-"index.html": "bd777d0ba71d7e4feb633a20a4093118",
-"/": "bd777d0ba71d7e4feb633a20a4093118",
-"main.dart.js": "37340347aa7ac1684dcb372bea42de43",
+"index.html": "3912596b8bc6f9f97cf657255f183b13",
+"/": "3912596b8bc6f9f97cf657255f183b13",
+"main.dart.js": "5386db7d07abf205a9279ca0954104c6",
 "manifest.json": "273c0878f4ba3995ad3813dd7aebc937",
 "version.json": "a3e14a464c3e94d94f5af36b2bfb2ad5"
 };
