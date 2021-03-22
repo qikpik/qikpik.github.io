@@ -23,10 +23,22 @@
   <meta name="apple-mobile-web-app-title" content="qikpik_flutter_frontend">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
+  <title>QikPik | Order ahead now.</title>
+  <meta name="title" content="QikPik | Order ahead now.">
+  <meta name="description" content="Order your prints at home and pickup when ready. No waiting in the queue!">  <link rel="manifest" href="manifest.json">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QikPik | Order ahead now.">
+  <meta property="og:url" content="https://go.qikpik.store/">
+  <meta property="og:title" content="QikPik | Order ahead now.">
+  <meta property="og:description" content="Order your prints at home and pickup when ready.">
+  <meta property="og:image" itemprop="image" content="icons/meta-image-whatsapp.jpg">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>qikpik_flutter_frontend</title>
+  <link rel="shortcut icon" href="icons/logo.ico" type="image/x-icon" />
+  <title>QikPik India</title>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -36,13 +48,12 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=39853040');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=1279806982');
       });
     }
   </script>
   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-  <script src="../lib/notifications.js"></script>
-  <script src="../lib/shareLink.js"></script>
+  <script src="../lib/utils/notifications.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
