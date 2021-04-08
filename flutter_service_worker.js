@@ -25,16 +25,16 @@ const RESOURCES = {
 "assets/fonts/Montserrat-SemiBoldItalic.ttf": "83c1ec1f1db9a6416791f7d9d29536f2",
 "assets/fonts/Montserrat-Thin.ttf": "43dd5b7a3d277362d5e801e5353e3a01",
 "assets/fonts/Montserrat-ThinItalic.ttf": "3c2b290f95cd5b33c3ead2911064a2ab",
-"assets/NOTICES": "b893dfcbe5aee446c355e63fd7cd7544",
+"assets/NOTICES": "0b43fd905813848764e2c7f63f4d4ad3",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
 "favicon.png": "08db2449be297eeb6344e770af74e95b",
 "icons/Logo.png": "ed6a24be5bfd62823363015bc4b57800",
-"index.html": "664dd7b2df1b7d7a04ceaabf3b421cf4",
-"/": "664dd7b2df1b7d7a04ceaabf3b421cf4",
-"main.dart.js": "c0ccef9bc8ed310ab1886b35b84fc0af",
+"index.html": "77e18c995da89c34ab65787686624a68",
+"/": "77e18c995da89c34ab65787686624a68",
+"main.dart.js": "cdddb9af9fbac5f523e8a9be5c9644b3",
 "manifest.json": "1988f159780bf6549a78d5f0f2eb9b0d",
-"version.json": "f290cb8cf68ff305d383cab9f0fa59f7"
+"version.json": "935f5a42df8ef6a67ce055a35f4a109f"
 };
 
 // The application shell files that are downloaded before a service worker can
