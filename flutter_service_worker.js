@@ -25,16 +25,16 @@ const RESOURCES = {
 "assets/fonts/Montserrat-SemiBoldItalic.ttf": "83c1ec1f1db9a6416791f7d9d29536f2",
 "assets/fonts/Montserrat-Thin.ttf": "43dd5b7a3d277362d5e801e5353e3a01",
 "assets/fonts/Montserrat-ThinItalic.ttf": "3c2b290f95cd5b33c3ead2911064a2ab",
-"assets/NOTICES": "65058dc1da22967be146cab7815fb918",
+"assets/NOTICES": "731d6ac6b224dadda7d8b59d138d8b2c",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
 "favicon.png": "08db2449be297eeb6344e770af74e95b",
 "icons/Logo.png": "ed6a24be5bfd62823363015bc4b57800",
 "index.html": "594e21ae9e014b5db3fbf2570b56b45e",
 "/": "594e21ae9e014b5db3fbf2570b56b45e",
-"main.dart.js": "7f87ed1cc3d1f709145b58af9d5f14b2",
+"main.dart.js": "88c071f1c1c6ffdac7795ab3becec81b",
 "manifest.json": "1988f159780bf6549a78d5f0f2eb9b0d",
-"version.json": "bd3eccab72a66f848e791a4fe8ce2f29"
+"version.json": "e7c160ffd368a6eef1d0d0e9957023cf"
 };
 
 // The application shell files that are downloaded before a service worker can
