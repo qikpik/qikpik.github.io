@@ -49,18 +49,41 @@
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  application. For more information, see:
+  https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=1279806982');
+      window.addEventListener('load', function () {
+          //getting rid of undesired cache before running the app
+          var seconds = new Date().getTime()
+          xmlhttp = new XMLHttpRequest();
+          xmlhttp.open("GET", '/version.json?v=' + seconds, true);
+          xmlhttp.onload = function () {
+              if (xmlhttp.status == 200) {
+                  var versionJson = JSON.parse(xmlhttp.responseText);
+                  var buildNumber = versionJson['build_number'].replace(/^"(.*)"$/, '$1');
+                  var currentBuildNumber = window.localStorage.getItem('buildNumber');
+                  console.log("BN: " + buildNumber + " - NBN: " + currentBuildNumber);
+                  if (currentBuildNumber && currentBuildNumber != buildNumber) {
+                      caches.delete('flutter-app-manifest');
+                      caches.delete('flutter-temp-cache');
+                      caches.delete('flutter-app-cache');
+                  }
+                  window.localStorage.setItem('buildNumber', buildNumber);
+              }
+              navigator.serviceWorker.register('flutter_service_worker.js?v=718308026');
+          }
+          xmlhttp.error = function () {navigator.serviceWorker.register('flutter_service_worker.js');}
+          xmlhttp.abort = function () {navigator.serviceWorker.register('flutter_service_worker.js');}
+          xmlhttp.timeout = function () {navigator.serviceWorker.register('flutter_service_worker.js');}
+          xmlhttp.send();
       });
     }
   </script>
   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
   <script src="scripts/notifications.js"></script>
   <script src="scripts/shareLink.js"></script>
+  <script src="scripts/json2.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
