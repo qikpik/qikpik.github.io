@@ -30,13 +30,13 @@ const RESOURCES = {
 "assets/fonts/Montserrat-SemiBoldItalic.ttf": "83c1ec1f1db9a6416791f7d9d29536f2",
 "assets/fonts/Montserrat-Thin.ttf": "43dd5b7a3d277362d5e801e5353e3a01",
 "assets/fonts/Montserrat-ThinItalic.ttf": "3c2b290f95cd5b33c3ead2911064a2ab",
-"assets/NOTICES": "04ae0b9e087a7e8d9dda602262c979a6",
+"assets/NOTICES": "0bded943f02809a78c56a0e677fc93b6",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "favicon.png": "08db2449be297eeb6344e770af74e95b",
 "icons/Logo.png": "ed6a24be5bfd62823363015bc4b57800",
-"index.html": "dd51eb3881ed361c3ed5883debcd11a6",
-"/": "dd51eb3881ed361c3ed5883debcd11a6",
-"main.dart.js": "0866916f10cc166a69056e01728ebdd2",
+"index.html": "71c2207642bbefc509c473e47354ce21",
+"/": "71c2207642bbefc509c473e47354ce21",
+"main.dart.js": "92c5881b58f2d92776bae6fd9f89a9a9",
 "manifest.json": "762910ad01a7605720148a8b64975ec0",
 "scripts/json2.js": "87205cabb54bc3d7730d0c2bfebd2a41",
 "scripts/notifications.js": "bb97e085fe31fb03c3bcdaab4cdef1a5",
@@ -48,7 +48,7 @@ const RESOURCES = {
 "splash/img/light-2x.png": "aabdddd1ead7bdad3937a62c13fdaee3",
 "splash/img/light-3x.png": "267a2b61dc8230d4c2291004e0fa6208",
 "splash/style.css": "c30094c201c75a3c02bca15d479a6496",
-"version.json": "1ac8489788fb8793b8b56e81220398c7"
+"version.json": "3d649397223f882a6a27cf3081fde6a2"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -66,7 +66,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value, {'cache': 'reload'})));
+        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
     })
   );
 });
