@@ -3,15 +3,15 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "398abd8f626c18b312c4a666eb0be6ab",
+  "assets/AssetManifest.json": "5345da662d9b633f8c44ecef5a52f026",
 "assets/assets/intro/1.png": "fffbace2b807b835b002de252a635649",
 "assets/assets/intro/14.png": "193541964eaf1bd8682feaeec1b60abd",
 "assets/assets/intro/16.png": "b620f0b0b13e06b7704125de5dd631ad",
 "assets/assets/intro/4.png": "f25efee82a5fcfcf5160324f815acf17",
-"assets/assets/intro/upi.svg": "b4ee16270f121b8b6857afa09139c27f",
+"assets/assets/intro/upi.svg": "22b6661af77f4b3669824a8de2020863",
 "assets/assets/Logo.png": "ed6a24be5bfd62823363015bc4b57800",
 "assets/FontManifest.json": "d753ee3c4f88ff0449db9f8af5ebff24",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
+"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/fonts/Montserrat-Black.ttf": "27e3649bab7c62fa21b8837c4842e40e",
 "assets/fonts/Montserrat-BlackItalic.ttf": "d9b6ba595b059fc5d48e8f52c30f73b3",
 "assets/fonts/Montserrat-Bold.ttf": "ade91f473255991f410f61857696434b",
@@ -30,25 +30,26 @@ const RESOURCES = {
 "assets/fonts/Montserrat-SemiBoldItalic.ttf": "83c1ec1f1db9a6416791f7d9d29536f2",
 "assets/fonts/Montserrat-Thin.ttf": "43dd5b7a3d277362d5e801e5353e3a01",
 "assets/fonts/Montserrat-ThinItalic.ttf": "3c2b290f95cd5b33c3ead2911064a2ab",
-"assets/NOTICES": "0bded943f02809a78c56a0e677fc93b6",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"assets/NOTICES": "af81adac2d77fb12f94446ece290439d",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
+"assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
 "favicon.png": "08db2449be297eeb6344e770af74e95b",
 "icons/Logo.png": "ed6a24be5bfd62823363015bc4b57800",
-"index.html": "71c2207642bbefc509c473e47354ce21",
-"/": "71c2207642bbefc509c473e47354ce21",
-"main.dart.js": "92c5881b58f2d92776bae6fd9f89a9a9",
-"manifest.json": "762910ad01a7605720148a8b64975ec0",
-"scripts/json2.js": "87205cabb54bc3d7730d0c2bfebd2a41",
-"scripts/notifications.js": "bb97e085fe31fb03c3bcdaab4cdef1a5",
-"scripts/shareLink.js": "3726fcb5859c5a4393cad64eed01b96f",
+"index.html": "3e82d6d6be7818fa713b237ccd0482dd",
+"/": "3e82d6d6be7818fa713b237ccd0482dd",
+"main.dart.js": "d101210c3e6fb59ccdd14b9946ec6583",
+"manifest.json": "1988f159780bf6549a78d5f0f2eb9b0d",
+"scripts/json2.js": "9badd11ef91776259f7828a1eb771992",
+"scripts/notifications.js": "d178e89670d13a84ab83ed5a7d515428",
+"scripts/shareLink.js": "94577b4cc06e71c00eb4c39887bd93e9",
 "splash/img/dark-1x.png": "8fe1c22676fb498f7843b7c672562291",
 "splash/img/dark-2x.png": "aabdddd1ead7bdad3937a62c13fdaee3",
 "splash/img/dark-3x.png": "267a2b61dc8230d4c2291004e0fa6208",
 "splash/img/light-1x.png": "8fe1c22676fb498f7843b7c672562291",
 "splash/img/light-2x.png": "aabdddd1ead7bdad3937a62c13fdaee3",
 "splash/img/light-3x.png": "267a2b61dc8230d4c2291004e0fa6208",
-"splash/style.css": "c30094c201c75a3c02bca15d479a6496",
-"version.json": "3d649397223f882a6a27cf3081fde6a2"
+"splash/style.css": "3310f8170d554be3ace57bc266ea7b5c",
+"version.json": "cd960bc85ed212107a14457839669bad"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -66,7 +67,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
